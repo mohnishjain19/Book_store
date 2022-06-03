@@ -10,7 +10,7 @@ function App() {
   return (
    <React.Fragment>
      <header>
-      <Header></Header>
+      <Header/>
      </header>
      <main>
        <Routes>
