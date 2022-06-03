@@ -24,21 +24,22 @@ export const AddBook = () => {
    } ;
 
   const sendRequest=async()=>{
-      axios.post("http://localhost:5000/books",{
+      axios.post("https://mohnish-book-store.herokuapp.com/books",{
       name:String(inputs.name),
       author:String(inputs.author),
       description:String(inputs.description),
       price:Number(inputs.price),
       img:String(inputs.img),
       available:Boolean(checked)
-
-      }).then(res=>res.data);
+      }).then(res => {
+        console.log(res);
+      });
   } 
 
    const handleSubmit=(e)=>{
     e.preventDefault();
+    console.log(inputs);
     sendRequest().then(()=>history('/books'));
-
    }
   return (
 

@@ -17,8 +17,12 @@ app.use("/books",router);
 
 
 mongoose.connect("mongodb+srv://admin:tj8pLRiY2B1vU8Zf@cluster0.i9wjl.mongodb.net/?retryWrites=true&w=majority")
-.then(()=>console.log("Connected to database"))
-.then(()=>{
-    app.listen(5000);
-}).catch((err)=>console.log(err));
+.then(()=>console.log("Connected to database"));
+// .then(()=>{
+// }).catch((err)=>console.log(err));
+
+app.listen(process.env.PORT ||5000,() =>{
+    console.log("Server Running on 5000");
+
+})
 

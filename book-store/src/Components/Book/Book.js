@@ -10,7 +10,7 @@ const Book = (props) =>
      const{_id, name,author,description,price,img}=props.book;
      const deleteHandler = async() => {
        await axios
-       .delete(`http://localhost:5000/books/${_id}`)
+       .delete(`https://mohnish-book-store.herokuapp.com/books/${_id}`)
        .then((res)=>res.data)
        .then(()=>history("/"))
        .then(()=>history("/books"));
